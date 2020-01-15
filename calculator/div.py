@@ -102,10 +102,10 @@ def div(firstNumber,secondNumber):
     while previousCut<len(firstNumber):
         first_cut = first_cut + firstNumber[previousCut:previousCut+1]
         while first_cut[0] == "0" and first_cut !="0":
-            quetiont= quetiont + "0"
+            if first_cut[1]!="0": quetiont= quetiont + "0"
             first_cut = first_cut[1:]
         len_first_cut = len(first_cut)
-        if len_first_cut>len_second or (len_first_cut==len_second and first_cut>secondNumber):
+        if len_first_cut>len_second or (len_first_cut==len_second and first_cut>=secondNumber):
             sub_quetiont = 1
             sub_second = secondNumber
             len_sub_second = len(secondNumber)
@@ -152,7 +152,7 @@ def div(firstNumber,secondNumber):
                     for zero in first_cut[previousCut+1:]:
                         if zero !="0":isAll=False
                     if isAll:
-                        quetiont = quetiont + firstNumber[previousCut+1:]
+                        quetiont = quetiont + first_cut[previousCut+1:]
                         break
                 
             else:

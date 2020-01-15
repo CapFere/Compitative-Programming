@@ -90,4 +90,11 @@ def mult(firstNumber,secondNumber):
 
     #print the result
     return product
+
+def main():
+    number ="1" + str("0"*1000000)
+    file = open("mult.txt","w")
+    file.write(mult(number,number))
+    file.close()
+if __name__=="__main__":main()
             

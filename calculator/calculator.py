@@ -13,7 +13,13 @@ def main():
     print(colored_ascii)
     while True:
         user_input = input("Enter Command(Operand Operator Operand)(quit: q): ").split()
-        if(user_input[0] and user_input[0]=="q"): break
+        if(user_input[0] and user_input[0]=="q"): 
+            color = "red"
+            font = "slant" 
+            ascii_art = figlet_format("E x i t",font=font)
+            colored_ascii = colored(ascii_art,color=color)
+            print(colored_ascii)
+            break
         if(len(user_input)<3):
             print("\nERROR:: Too Few Arguments Expected(3) Got(%s)\n".format(len(user_input)))
             continue
